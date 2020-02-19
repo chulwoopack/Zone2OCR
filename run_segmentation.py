@@ -27,8 +27,8 @@ parser.add_argument('-i', '--imagepath', type=str, required=True,
 parser.add_argument('-s', '--savepath', type=str, required=True,
                    help='a path to the root directory of save files')
 
-parser.add_argument('-t', '--threshold', type=int, default=0.005
-                   help='a threshold for ignoring small zones [0,1] (default: 0.005')
+parser.add_argument('-t', '--threshold', type=int, default=0.005,
+                   help='a threshold for ignoring small zones [0,1] (default: 0.005)')
 
 args = parser.parse_args()
 
