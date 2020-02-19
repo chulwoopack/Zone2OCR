@@ -61,7 +61,32 @@ python mapping.py -zx <ZONE_XML_DIR> -ox <OCR_XML_DIR> [-t <IOU_THRESHOLD>] -s <
 * `-v`: (Optional) Increase output verbosity (default: False) 
 
 ## Remark
-Both segmentation result and OCR XML file have to follow [PAGE XML-schema](https://www.primaresearch.org/tools/PAGELibraries).
+* Both segmentation result and OCR XML file have to follow [PAGE XML-schema](https://www.primaresearch.org/tools/PAGELibraries)
+* Output `JSON` file follows the below structure:
+```
+[
+  {
+    "zone_coord" : [
+    	[x1,y1],[x2,y2],[x3,y3],[x4,y4]            // Found zone 1
+    ],
+    "ocr_coord" : [
+      [
+        [x1,y1],[x2,y2],[x3,y3],[x4,y4],           // Matched OCR zone 1
+        [x1',y1'],[x2',y2'],[x3',y3'],[x4',y4'],   // Matched OCR zone 2
+        ...,
+      ]
+    ]
+    "ocr_texts" : [
+      "text1",                                     // Matched OCR zone 1's text contents
+      "text2",                                     // Matched OCR zone 2's text contents
+      ...,
+    ]
+  },
+  {
+  	...                                            // Found zone 2
+  }
+]
+```
 
 ## Authors
 - **Chulwoo Pack** - University of Nebraska-Lincoln - _email_ - [cpack@cse.unl.edu](mailto:cpack@cse.unl.edu)
