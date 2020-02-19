@@ -84,7 +84,8 @@ python mapping.py -zx <ZONE_XML_DIR> -ox <OCR_XML_DIR> [-t <IOU_THRESHOLD>] -s <
   },
   {
     ...                                            // Found zone 2
-  }
+  },
+  ...
 ]
 ```
 
