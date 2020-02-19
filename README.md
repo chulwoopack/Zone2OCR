@@ -21,18 +21,18 @@ pip install ./dhsegment/.
 ```
 and install TensorFlow 1.13 with
 ```
-conda  install  tensorflow-gpu=1.13.1
+conda install tensorflow-gpu=1.13.1
 ```
 ## Usage
 1. Make sure to prepare a valid file structure as below: 
-(Note: all segmentation result xml files should match with ocr xml files)
+(Note: all segmentation result xml files should match with OCR xml files)
 ```
 .root
 ├── zone_xmls     # segmentation results
 │   ├── image1.xml  
 │   ├── ...
 │   └── image8.xml
-├── ocr_xmls      # ocr results
+├── ocr_xmls      # OCR results
 │   ├── image1.xml  
 │   ├── ...
 │   └── image8.xml
@@ -41,18 +41,31 @@ conda  install  tensorflow-gpu=1.13.1
     ├── ...
     └── image8.jpg
 ```
-(Optional) Pretrained dhSegment 
+(Optional) Run pretrained dhSegment to collect segmentation result xml files
 ```
-python run_segmentation.py -i <IMAGE_PATH> -s <SAVE_PATH> [-t <SMALL_REGION_THRESHOLD>]
+python run_segmentation.py -i <IMAGE_DIR> -s <SAVE_DIR> [-t <SMALL_REGION_THRESHOLD>] [-v (True|False)]
 ```
 * `-i`: The path to the folder containing image to be processed
 * `-s`: The path to the folder to store output xml file
-* `-t`: (Optional) A threshold for ignoring small zones [0,1] (default: 0.005)
+* `-t`: (Optional) A threshold of *area(zone)/area(full_page)* ratio for ignoring small zones [0,1] (default: 0.005)
+* `-v`: (Optional) Increase output verbosity (default: False) 
+
 2. Run mapping
 ```
-python mapping.py
+python mapping.py -zx <ZONE_XML_DIR> -ox <OCR_XML_DIR> [-t <IOU_THRESHOLD>] -s <SAVE_DIR> [-v (True|False)]
 ```
+* `-zx`: The path to the folder containing segmentation result xml files
+* `-ox`: The path to the folder containing OCR xml files
+* `-t`: (Optional) A threshold of intersection over union to ignore small zones [0,1] (default: 0.1)
+* `-s`: The path to the folder to store output `JSON` file
+* `-v`: (Optional) Increase output verbosity (default: False) 
+
 ## Remark
 Both segmentation result and OCR XML file have to follow [PAGE XML-schema](https://www.primaresearch.org/tools/PAGELibraries).
-# OCR2Zone
-Mapping OCR coordinates (zone-level) to its text content
+
+## Authors
+- **Chulwoo Pack** - University of Nebraska-Lincoln - _email_ - [cpack@cse.unl.edu](mailto:cpack@cse.unl.edu)
+- **Benoit Seguin** and **Sofia Ares Oliveira** - DHLAB, EPFL - _git_ - [https://github.com/dhlab-epfl/dhSegment](https://github.com/dhlab-epfl/dhSegment)
+
+## License
+This project is licensed under the GPL License - see the [LICENSE](/LICENSE) file for details
