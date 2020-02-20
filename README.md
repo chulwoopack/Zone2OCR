@@ -94,7 +94,10 @@ python mapping.py -zx <ZONE_XML_DIR> -ox <OCR_XML_DIR> [-t <IOU_THRESHOLD>] -s <
 
 ## Authors
 - **Chulwoo Pack** - University of Nebraska-Lincoln - _email_ - [cpack@cse.unl.edu](mailto:cpack@cse.unl.edu)
-- **Benoit Seguin** and **Sofia Ares Oliveira** - DHLAB, EPFL - _git_ - [https://github.com/dhlab-epfl/dhSegment](https://github.com/dhlab-epfl/dhSegment)
+
+## Acknowledgements
+Main parts of dhSegment code are adapted from the work by
+**Benoit Seguin** and **Sofia Ares Oliveira** - DHLAB, EPFL - _git_ - [https://github.com/dhlab-epfl/dhSegment](https://github.com/dhlab-epfl/dhSegment)
 
 ## License
 This project is licensed under the GPL License - see the [LICENSE](/LICENSE) file for details
