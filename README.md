@@ -12,17 +12,17 @@ conda create -n <ENV_NAME> python=3.6
 conda activate <ENV_NAME>
 ```
 
-(Optional) If one wants to run the segmentation algorithm ([dhSegment](https://github.com/dhlab-epfl/dhSegment)) pretrained on [ImageNet](http://www.image-net.org/) + [Europeana historical Newspaper Project](https://www.primaresearch.org/datasets/ENP), install Tensorflow 1.13 first with
-```
-# For cpu
-conda install -c conda-forge tensorflow=1.13
-# For gpu
-conda install tensorflow-gpu=1.13.1
-```
-and then install dhSegment dependencies with
-```
-pip install ./dhsegment/.
-```
+> (Optional) If one wants to run the segmentation algorithm ([dhSegment](https://github.com/dhlab-epfl/dhSegment)) pretrained on [ImageNet](http://www.image-net.org/) + [Europeana historical Newspaper Project](https://www.primaresearch.org/datasets/ENP), install Tensorflow 1.13 first with
+> ```
+> # For cpu
+> conda install -c conda-forge tensorflow=1.13
+> # For gpu
+> conda install tensorflow-gpu=1.13.1
+> ```
+> and then install dhSegment dependencies with
+> ```
+> pip install ./dhsegment/.
+> ```
 
 4. Install Zone2OCR dependencies with
 ```
