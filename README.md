@@ -12,7 +12,7 @@ conda create -n <ENV_NAME> python=3.6
 conda activate <ENV_NAME>
 ```
 
-(Optional) If one wants to run the segmentation algorithm (dhSegment) pretrained on [ImageNet]([http://www.image-net.org/](http://www.image-net.org/)) + [Europeana historical Newspaper Project]([https://www.primaresearch.org/datasets/ENP](https://www.primaresearch.org/datasets/ENP)), install Tensorflow 1.13 first with
+(Optional) If one wants to run the segmentation algorithm ([dhSegment](https://github.com/dhlab-epfl/dhSegment)) pretrained on [ImageNet](http://www.image-net.org/) + [Europeana historical Newspaper Project](https://www.primaresearch.org/datasets/ENP), install Tensorflow 1.13 first with
 ```
 # For cpu
 conda install -c conda-forge tensorflow=1.13
