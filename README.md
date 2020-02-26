@@ -8,7 +8,7 @@ Zone2OCR is a tool for document layout analysis. This tool aims at mapping a seg
 2. Install Anaconda or Miniconda ([installation procedure](https://docs.anaconda.com/anaconda/install/]))
 3. Create a virtual environment and activate it
 ```
-conda create -n <ENV_NAME>
+conda create -n <ENV_NAME> python=3
 conda activate <ENV_NAME>
 ```
 
