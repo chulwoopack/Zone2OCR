@@ -11,18 +11,24 @@ Zone2OCR is a tool for document layout analysis. This tool aims at mapping a seg
 conda create -n <ENV_NAME>
 conda activate <ENV_NAME>
 ```
-4. Install Zone2OCR dependencies with
+
+(Optional) If one wants to run the segmentation algorithm (dhSegment) pretrained on [ImageNet]([http://www.image-net.org/](http://www.image-net.org/)) + [Europeana historical Newspaper Project]([https://www.primaresearch.org/datasets/ENP](https://www.primaresearch.org/datasets/ENP)), install Tensorflow 1.13 first with
 ```
-pip install .
-```
-(Optional) If one wants to run the dhSegment algorithm pretrained by [ImageNet]([http://www.image-net.org/](http://www.image-net.org/)) + [Europeana Historical Newspaper]([https://www.primaresearch.org/datasets/ENP](https://www.primaresearch.org/datasets/ENP)), install dhSegment dependencies with
-```
-pip install ./dhsegment/.
-```
-and install TensorFlow 1.13 with
-```
+# For cpu
+conda install -c conda-forge tensorflow=1.13
+# For gpu
 conda install tensorflow-gpu=1.13.1
 ```
+and then install dhSegment dependencies with
+```
+python ./dhsegment/setup.py install
+```
+
+4. Install Zone2OCR dependencies with
+```
+python setup.py install
+```
+
 ## Usage
 1. Make sure to prepare a valid file structure as below: 
 (Note: all segmentation result xml files should match with OCR xml files)
