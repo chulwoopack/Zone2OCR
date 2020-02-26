@@ -47,14 +47,14 @@ pip install .
     ├── ...
     └── image8.jpg
 ```
-(Optional) Run pretrained dhSegment to collect segmentation result xml files
-```
-python run_segmentation.py -i <IMAGE_DIR> -s <SAVE_DIR> [-t <SMALL_REGION_THRESHOLD>] [-v (True|False)]
-```
-* `-i`: The path to the folder containing image to be processed
-* `-s`: The path to the folder to store output xml file
-* `-t`: (Optional) A threshold of *area(zone)/area(full_page)* ratio for ignoring small zones [0,1] (default: 0.005)
-* `-v`: (Optional) Increase output verbosity (default: False) 
+> (Optional) Run pretrained dhSegment to collect segmentation result xml files
+> ```
+> python run_segmentation.py -i <IMAGE_DIR> -s <SAVE_DIR> [-t <SMALL_REGION_THRESHOLD>] [-v (True|False)]
+> ```
+> * `-i`: The path to the folder containing image to be processed
+> * `-s`: The path to the folder to store output xml file
+> * `-t`: (Optional) A threshold of *area(zone)/area(full_page)* ratio for ignoring small zones [0,1] (default: 0.005)
+> * `-v`: (Optional) Increase output verbosity (default: False) 
 
 2. Run mapping
 ```
