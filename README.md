@@ -21,12 +21,12 @@ conda install tensorflow-gpu=1.13.1
 ```
 and then install dhSegment dependencies with
 ```
-python ./dhsegment/setup.py install
+pip install ./dhsegment/.
 ```
 
 4. Install Zone2OCR dependencies with
 ```
-python setup.py install
+pip install .
 ```
 
 ## Usage
