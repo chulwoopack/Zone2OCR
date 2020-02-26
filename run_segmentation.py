@@ -50,6 +50,13 @@ LINE_ID   = 3
 TABLE_ID  = 4
 
 
+"""Prepare Dirs"""
+try:
+    os.makedirs(LOG_DIR)
+except FileExistsError:
+    # directory already exist
+    pass
+
 """Start session"""
 session = tf.InteractiveSession()
 
