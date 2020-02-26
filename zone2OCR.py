@@ -49,6 +49,17 @@ if DEBUG:
 
 
 """
+Prepare Dirs
+"""
+try:
+    os.makedirs(SAVE_PATH)
+except FileExistsError:
+    # directory already exist
+    pass
+
+
+
+"""
 MAIN
 """
 # Preparation
