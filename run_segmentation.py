@@ -54,7 +54,7 @@ TABLE_ID  = 4
 session = tf.InteractiveSession()
 
 """Load model"""
-model_dir = './models/ENP_500_model_v3/export/1564890842/'
+model_dir = './dhSegment/pretrained_models/ENP_500_model_v3/export/1564890842/'
 m = LoadedModel(model_dir, predict_mode='filename')
 
 
