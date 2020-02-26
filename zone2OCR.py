@@ -55,7 +55,7 @@ MAIN
 zone_xml_file_paths = sorted(glob(os.path.join(ZONE_XML_PATH,'**/*.xml'),recursive=True))
 ocr_xml_file_paths  = sorted(glob(os.path.join(OCR_XML_PATH,'**/*.xml'),recursive=True))
 
-for idx in tqdm(len(zone_xml_file_paths)):
+for idx in tqdm(range(len(zone_xml_file_paths))):
     zone_xml_file_path = zone_xml_file_paths[idx]
     ocr_xml_file_path  = ocr_xml_file_paths[idx]
 
@@ -116,7 +116,7 @@ for idx in tqdm(len(zone_xml_file_paths)):
     # output json
     map_json = []
 
-    for zone_idx,zone_textBlock in enumerate(tqdm(zone_textBlocks)):
+    for zone_idx,zone_textBlock in enumerate(zone_textBlocks):
         # zone coordinates
         zone_width  = int(float(zone_textBlock.attributes["WIDTH"].value))
         zone_height = int(float(zone_textBlock.attributes["HEIGHT"].value))
