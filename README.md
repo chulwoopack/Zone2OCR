@@ -58,7 +58,7 @@ python run_segmentation.py -i <IMAGE_DIR> -s <SAVE_DIR> [-t <SMALL_REGION_THRESH
 
 2. Run mapping
 ```
-python mapping.py -zx <ZONE_XML_DIR> -ox <OCR_XML_DIR> [-t <IOU_THRESHOLD>] -s <SAVE_DIR> [-v (True|False)]
+python zone2ocr.py -zx <ZONE_XML_DIR> -ox <OCR_XML_DIR> [-t <IOU_THRESHOLD>] -s <SAVE_DIR> [-v (True|False)]
 ```
 * `-zx`: The path to the folder containing segmentation result xml files
 * `-ox`: The path to the folder containing OCR xml files
