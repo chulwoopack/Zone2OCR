@@ -73,7 +73,7 @@ python zone2ocr.py -zx <ZONE_XML_DIR> -ox <OCR_XML_DIR> [-t <IOU_THRESHOLD>] -s 
 [
   {
     "zone_coord" : [
-    	[x1,y1],[x2,y2],[x3,y3],[x4,y4]              // Found zone 1
+      [x1,y1],[x2,y2],[x3,y3],[x4,y4]              // Found zone 1
     ],
     "zone_texts": [                               
       "text1",                                     // Matched OCR zone 1's text contents within the zone 1
