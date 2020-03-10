@@ -12,5 +12,7 @@ setup(name='zone2ocr',
         'opencv-python',
         'shapely',
         'tqdm==4.31.1',
+        'jupyter',
+        'matplotlib'
       ],
       zip_safe=False)
