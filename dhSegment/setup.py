@@ -12,7 +12,7 @@ setup(name='dh_segment',
           'Source Code': 'https://github.com/dhlab-epfl/dhSegment'
       },
       install_requires=[
-        'numpy==1.16.2',
+        'numpy==1.22.0',
         'imageio==2.5.0',
         'pandas==0.24.2',
         'scipy==1.2.1',
