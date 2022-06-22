@@ -8,7 +8,7 @@ setup(name='zone2ocr',
       description='Segmentation mapping tool for document processing',
       packages=find_packages(exclude=['exps*']),
       install_requires=[
-        'numpy==1.16.2',
+        'numpy==1.22.0',
         'opencv-python',
         'shapely',
         'tqdm==4.31.1',
